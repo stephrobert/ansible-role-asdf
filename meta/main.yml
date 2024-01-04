@@ -1,0 +1,20 @@
+---
+galaxy_info:
+  author: Stephane ROBERT
+  role_name: asdf
+  namespace: stephrobert
+  description: Install asdf
+  company: none
+  license: MLP2
+  min_ansible_version: "2.11"
+  platforms:
+    - name: Debian
+      versions:
+        - bullseye
+        - bookworm
+    - name: Ubuntu
+      versions:
+        - jammy
+  galaxy_tags:
+    - hardening
+dependencies: []

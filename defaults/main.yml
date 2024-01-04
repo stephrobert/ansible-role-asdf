@@ -1,0 +1,34 @@
+---
+asdf_plugins:
+  - { name: awscli, version: 2.7.34 }
+  - { name: bat, version: 0.22.1 }
+  - { name: direnv, version: 2.32.1 }
+  - { name: exa, version: 0.10.1 }
+  - { name: direnv, version: 2.32.1 }
+  - { name: helm, version: 3.9.4 }
+  - { name: kubectl, version: 1.25.0 }
+  - { name: glab, version: 1.22.0 }
+  - { name: github-cli, version: 2.16.1 }
+  - { name: gohugo, version: 0.103.1 }
+  - { name: hadolint, version: 2.10.0 }
+  - { name: jq, version: 1.6 }
+  - { name: k9s, version: 0.26.5 }
+  - { name: kind, version: 0.16.0 }
+  - { name: krew, version: 0.4.3 }
+  - { name: kubectl, version: 1.25.2 }
+  - { name: kubectx, version: 0.9.4 }
+  - { name: kustomize, version: 4.5.7 }
+  - { name: minikube, version: 1.27.0 }
+  - { name: mkcert, version: 1.4.4 }
+  - { name: nomad, version: 1.3.5 }
+  - { name: packer, version: 1.8.3 }
+  - { name: popeye, version: v0.10.1 }
+  - { name: polaris, version: 7.1.4 }
+  - { name: rclone, version: 1.59.2 }
+  - { name: tekton-cli, version: 0.26.0 }
+  - { name: terraform, version: 1.3.0 }
+  - { name: tflint, version: 0.40.1 }
+  - { name: tfsec, version: 1.28.0 }
+  - { name: trivy, version: 0.32.0 }
+  - { name: vault, version: 1.11.3 }
+  - { name: yq, version: 4.27.5 }
