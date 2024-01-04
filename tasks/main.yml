@@ -30,5 +30,4 @@
   ansible.builtin.shell: "bash -lc 'source ~/.asdf/asdf.sh && ~/.asdf/bin/asdf plugin add {{ item.name }}' || true"
   with_items: "{{ asdf_plugins }}"
 - name: Install tool
-  ansible.builtin.shell: "bash -lc 'source ~/.asdf/asdf.sh && ~/.asdf/bin/asdf install {{ item.name }}' || true"
-  with_items: "{{ asdf_plugins }}"
+  ansible.builtin.shell: "bash -lc 'source ~/.asdf/asdf.sh && ~/.asdf/bin/asdf install' || true"
