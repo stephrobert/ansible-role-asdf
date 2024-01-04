@@ -3,7 +3,7 @@ asdf_plugins:
   - { name: act, version: 0.2.55 }
   - { name: awscli, version: 2.15.1 }
   - { name: bat, version: 0.24.0 }
-  - { name: crane, version: 1.17.0 }
+  - { name: crane, version: 0.17.0 }
   - { name: direnv, version: 2.33.0 }
   - { name: dive, version: 0.11.0 }
   - { name: exa, version: 0.10.1 }
@@ -11,12 +11,11 @@ asdf_plugins:
   - { name: kubectl, version: 1.29.0 }
   - { name: glab, version: 1.36.0 }
   - { name: github-cli, version: 2.40.1 }
-  - { name: gitleaks, version: 0.18.1 }
+  - { name: gitleaks, version: 8.18.1 }
   - { name: golang, version: 1.21.5 }
   - { name: grype, version: 0.73.5 }
   - { name: hadolint, version: 2.12.0 }
-  - { name: helm, version: 3.13.3 }
-  - { name: jq, version: 1.1.7 }
+  - { name: jq, version: 1.7.1 }
   - { name: k9s, version: 0.26.5 }
   - { name: kind, version: 0.16.0 }
   - { name: krew, version: 0.4.3 }
