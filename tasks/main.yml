@@ -2,17 +2,14 @@
 - name: Include task
   ansible.builtin.include_tasks:
     file: "{{ ansible_distribution | lower }}{{ ansible_distribution_major_version }}.yml"
-- name: Get Env Home
-  ansible.builtin.set_fact:
-    home: "{{ lookup('env', 'HOME') }}"
 - name: Git asdf project
   ansible.builtin.git:
     repo: https://github.com/asdf-vm/asdf.git
-    dest: "~/.asdf"
+    dest: "/home/{{ ansible_user_id }}/.asdf"
     version: v0.13.1
 - name: Insert Line in File for asdf
   ansible.builtin.lineinfile:
-    path: "~/.bashrc"
+    path: "/home/{{ ansible_user_id }}/.bashrc"
     mode: "700"
     owner: "{{ ansible_user_id }}"
     group: "{{ ansible_user_id }}"
@@ -22,12 +19,12 @@
 - name: Create .tool-versions file
   ansible.builtin.template:
     src: tool-versions.j2
-    dest: "~/.tool-versions"
+    dest: "/home/{{ ansible_user_id }}/.tool-versions"
     mode: "600"
     owner: "{{ ansible_user_id }}"
     group: "{{ ansible_user_id }}"
 - name: Add plugin asdf
-  ansible.builtin.shell: "bash -lc 'source ~/.asdf/asdf.sh && ~/.asdf/bin/asdf plugin add {{ item.name }}' || true"
+  ansible.builtin.shell: "bash -lc 'source /home/{{ ansible_user_id }}/.asdf/asdf.sh && /home/{{ ansible_user_id }}/.asdf/bin/asdf plugin add {{ item.name }}' || true"
   with_items: "{{ asdf_plugins }}"
 - name: Install tool
-  ansible.builtin.shell: "bash -lc 'source ~/.asdf/asdf.sh && ~/.asdf/bin/asdf install' || true"
+  ansible.builtin.shell: "bash -lc 'source /home/{{ ansible_user_id }}/.asdf/asdf.sh && /home/{{ ansible_user_id }}/.asdf/bin/asdf install' || true"
